@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/pierna.png" type="Texture" id=1]
 [ext_resource path="res://assets/ojo.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://assets/pelo.png" type="Texture" id=6]
 [ext_resource path="res://assets/pie.png" type="Texture" id=7]
 [ext_resource path="res://assets/oreja.png" type="Texture" id=8]
+[ext_resource path="res://personaje.gd" type="Script" id=9]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Descanso"
@@ -56,10 +57,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -66.291, -34.4864 ) ]
+"values": [ Vector2( -66.291, -34.4864 ), Vector2( -66.291, -34.4864 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("torso/cabeza/oreja:rotation_degrees")
@@ -92,10 +93,10 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.42 ),
+"transitions": PoolRealArray( 1, 0.637281 ),
 "update": 0,
-"values": [ Vector2( 1.47934, -53.1111 ) ]
+"values": [ Vector2( 1.47934, -53.1111 ), Vector2( 0.686, -45 ) ]
 }
 tracks/7/type = "value"
 tracks/7/path = NodePath("torso/cabeza:rotation_degrees")
@@ -128,10 +129,10 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -3.75842, -29.523 ) ]
+"values": [ Vector2( -3.75842, -29.523 ), Vector2( -3.75842, -29.523 ) ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("torso/cabeza/ojo iz:rotation_degrees")
@@ -164,10 +165,10 @@ tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [  ]
+"values": [ Vector2( 55.7592, -27.4749 ) ]
 }
 tracks/13/type = "value"
 tracks/13/path = NodePath("torso/cabeza/ojo der:rotation_degrees")
@@ -212,10 +213,10 @@ tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ -7.20002 ]
+"values": [ -3.5828, -7.0 ]
 }
 tracks/17/type = "value"
 tracks/17/path = NodePath("torso/brazo der:scale")
@@ -236,10 +237,10 @@ tracks/18/loop_wrap = true
 tracks/18/imported = false
 tracks/18/enabled = true
 tracks/18/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 6.50952, -102.637 ) ]
+"values": [ Vector2( 6.50952, -102.637 ), Vector2( 6.50952, -102.637 ) ]
 }
 tracks/19/type = "value"
 tracks/19/path = NodePath("torso/cabeza/pelo:rotation_degrees")
@@ -320,10 +321,10 @@ tracks/25/loop_wrap = true
 tracks/25/imported = false
 tracks/25/enabled = true
 tracks/25/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 2.73208 ),
 "update": 0,
-"values": [ 0.0 ]
+"values": [ 0.0, 7.0 ]
 }
 tracks/26/type = "value"
 tracks/26/path = NodePath("torso/brazo iz:scale")
@@ -416,10 +417,10 @@ tracks/33/loop_wrap = true
 tracks/33/imported = false
 tracks/33/enabled = true
 tracks/33/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 12.1242, 4.24126 ) ]
+"values": [ Vector2( 12.1242, 4.24126 ), Vector2( 12.124, 3 ) ]
 }
 tracks/34/type = "value"
 tracks/34/path = NodePath("torso/pierna der:rotation_degrees")
@@ -488,10 +489,10 @@ tracks/39/loop_wrap = true
 tracks/39/imported = false
 tracks/39/enabled = true
 tracks/39/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -19.7149, 48.2607 ) ]
+"values": [ Vector2( -19.7149, 48.2607 ), Vector2( -19.715, 47 ) ]
 }
 tracks/40/type = "value"
 tracks/40/path = NodePath("torso/pierna iz/pie iz:rotation_degrees")
@@ -592,6 +593,7 @@ tracks/47/keys = {
 
 [node name="personaje" type="Node2D"]
 position = Vector2( 63.9974, 218.389 )
+script = ExtResource( 9 )
 
 [node name="torso" type="Sprite" parent="."]
 position = Vector2( 428, 106.561 )
@@ -627,7 +629,7 @@ texture = ExtResource( 2 )
 
 [node name="brazo der" type="Sprite" parent="torso"]
 position = Vector2( 13, -42 )
-rotation = -0.125664
+rotation = -0.0625317
 z_index = -1
 texture = ExtResource( 3 )
 offset = Vector2( 20, 27 )
@@ -712,4 +714,7 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+pause_mode = 2
+autoplay = "Descanso"
+method_call_mode = 1
 anims/Descanso = SubResource( 1 )
