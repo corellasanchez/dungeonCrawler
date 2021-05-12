@@ -1,5 +1,7 @@
 extends Node2D
 
+class_name Personaje, "res://assets/iconos/personaje.png"
+
 onready var animation = get_node("AnimationPlayer")
 # Declare member variables here. Examples:
 # var a = 2

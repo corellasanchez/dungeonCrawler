@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://assets/pierna.png" type="Texture" id=1]
-[ext_resource path="res://assets/ojo.png" type="Texture" id=2]
-[ext_resource path="res://assets/brazo.png" type="Texture" id=3]
-[ext_resource path="res://assets/torso.png" type="Texture" id=4]
-[ext_resource path="res://assets/cabeza.png" type="Texture" id=5]
-[ext_resource path="res://assets/pelo.png" type="Texture" id=6]
-[ext_resource path="res://assets/pie.png" type="Texture" id=7]
-[ext_resource path="res://assets/oreja.png" type="Texture" id=8]
+[ext_resource path="res://assets/cuerpo/pierna.png" type="Texture" id=1]
+[ext_resource path="res://assets/cuerpo/ojo.png" type="Texture" id=2]
+[ext_resource path="res://assets/cuerpo/brazo.png" type="Texture" id=3]
+[ext_resource path="res://assets/cuerpo/torso.png" type="Texture" id=4]
+[ext_resource path="res://assets/cuerpo/cabeza.png" type="Texture" id=5]
+[ext_resource path="res://assets/cuerpo/pelo.png" type="Texture" id=6]
+[ext_resource path="res://assets/cuerpo/pie.png" type="Texture" id=7]
+[ext_resource path="res://assets/cuerpo/oreja.png" type="Texture" id=8]
 [ext_resource path="res://personaje.gd" type="Script" id=9]
 
 [sub_resource type="Animation" id=1]
@@ -718,3 +718,7 @@ pause_mode = 2
 autoplay = "Descanso"
 method_call_mode = 1
 anims/Descanso = SubResource( 1 )
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Node" type="Node" parent="Node"]
