@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/cuerpo/pierna.png" type="Texture" id=1]
 [ext_resource path="res://assets/cuerpo/ojo.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://assets/cuerpo/pie.png" type="Texture" id=7]
 [ext_resource path="res://assets/cuerpo/oreja.png" type="Texture" id=8]
 [ext_resource path="res://personaje.gd" type="Script" id=9]
+[ext_resource path="res://Espada.tscn" type="PackedScene" id=10]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Descanso"
@@ -592,11 +593,12 @@ tracks/47/keys = {
 }
 
 [node name="personaje" type="Node2D"]
-position = Vector2( 63.9974, 218.389 )
+position = Vector2( 0, -0.774506 )
 script = ExtResource( 9 )
+Espada = ExtResource( 10 )
 
 [node name="torso" type="Sprite" parent="."]
-position = Vector2( 428, 106.561 )
+position = Vector2( 78.1566, -87.4483 )
 texture = ExtResource( 4 )
 offset = Vector2( -1, -28 )
 
@@ -615,7 +617,7 @@ z_index = -1
 texture = ExtResource( 8 )
 
 [node name="pelo" type="Sprite" parent="torso/cabeza"]
-position = Vector2( 6.50952, -102.637 )
+position = Vector2( 6.00952, -102.637 )
 texture = ExtResource( 6 )
 
 [node name="ojo iz" type="Sprite" parent="torso/cabeza"]
@@ -646,6 +648,7 @@ __meta__ = {
 
 [node name="brazo iz" type="Sprite" parent="torso"]
 position = Vector2( -22, -43 )
+rotation = -5.96046e-08
 texture = ExtResource( 3 )
 offset = Vector2( -21, 28 )
 flip_h = true
@@ -656,6 +659,7 @@ __meta__ = {
 
 [node name="fin" type="Position2D" parent="torso/brazo iz"]
 position = Vector2( -39.8474, 58.9293 )
+rotation = -0.0039602
 __meta__ = {
 "_edit_bone_": true
 }
@@ -719,6 +723,12 @@ autoplay = "Descanso"
 method_call_mode = 1
 anims/Descanso = SubResource( 1 )
 
-[node name="Node" type="Node" parent="."]
-
-[node name="Node" type="Node" parent="Node"]
+[node name="Label" type="Label" parent="."]
+margin_left = 173.157
+margin_top = -176.509
+margin_right = 222.157
+margin_bottom = -162.509
+text = "Debbug"
+__meta__ = {
+"_edit_use_anchors_": false
+}
