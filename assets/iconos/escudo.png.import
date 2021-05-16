@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cfecff1ed8b37c3df8d2cd082607b3fa.png-83f22d2b7f47b869b537bc82be952665.stex"
+path="res://.import/escudo.png-dc21ea4d9f56a9645fe2a38b8cdc629b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/iconos/How to know the screen position of a node2D_ - Godot Engine - Q&A_files/cfecff1ed8b37c3df8d2cd082607b3fa.png"
-dest_files=[ "res://.import/cfecff1ed8b37c3df8d2cd082607b3fa.png-83f22d2b7f47b869b537bc82be952665.stex" ]
+source_file="res://assets/iconos/escudo.png"
+dest_files=[ "res://.import/escudo.png-dc21ea4d9f56a9645fe2a38b8cdc629b.stex" ]
 
 [params]
 

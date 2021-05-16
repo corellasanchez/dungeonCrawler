@@ -1,15 +1,19 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://assets/cuerpo/pierna.png" type="Texture" id=1]
-[ext_resource path="res://assets/cuerpo/ojo.png" type="Texture" id=2]
-[ext_resource path="res://assets/cuerpo/brazo.png" type="Texture" id=3]
-[ext_resource path="res://assets/cuerpo/torso.png" type="Texture" id=4]
-[ext_resource path="res://assets/cuerpo/cabeza.png" type="Texture" id=5]
-[ext_resource path="res://assets/cuerpo/pelo.png" type="Texture" id=6]
-[ext_resource path="res://assets/cuerpo/pie.png" type="Texture" id=7]
-[ext_resource path="res://assets/cuerpo/oreja.png" type="Texture" id=8]
-[ext_resource path="res://personaje.gd" type="Script" id=9]
-[ext_resource path="res://Espada.tscn" type="PackedScene" id=10]
+[ext_resource path="res://escenas/equipo/Escudo.tscn" type="PackedScene" id=1]
+[ext_resource path="res://escenas/equipo/Espada.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/cuerpo/pierna.png" type="Texture" id=3]
+[ext_resource path="res://assets/cuerpo/brazo.png" type="Texture" id=4]
+[ext_resource path="res://assets/cuerpo/pie.png" type="Texture" id=5]
+[ext_resource path="res://assets/cuerpo/cabeza.png" type="Texture" id=6]
+[ext_resource path="res://assets/cuerpo/ojo.png" type="Texture" id=7]
+[ext_resource path="res://assets/cuerpo/torso.png" type="Texture" id=8]
+[ext_resource path="res://assets/cuerpo/oreja.png" type="Texture" id=9]
+[ext_resource path="res://assets/cuerpo/pelo.png" type="Texture" id=10]
+[ext_resource path="res://escenas/personaje/Personaje.gd" type="Script" id=11]
+[ext_resource path="res://escenas/equipo/Casco.tscn" type="PackedScene" id=12]
+[ext_resource path="res://escenas/equipo/Armadura.tscn" type="PackedScene" id=13]
+[ext_resource path="res://escenas/equipo/Piernas.tscn" type="PackedScene" id=14]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Descanso"
@@ -594,17 +598,22 @@ tracks/47/keys = {
 
 [node name="personaje" type="Node2D"]
 position = Vector2( 0, -0.774506 )
-script = ExtResource( 9 )
-Espada = ExtResource( 10 )
+script = ExtResource( 11 )
+Espada = ExtResource( 2 )
+Escudo = ExtResource( 1 )
+Casco = ExtResource( 12 )
+Armadura = ExtResource( 13 )
+Piernas = ExtResource( 14 )
 
 [node name="torso" type="Sprite" parent="."]
-position = Vector2( 78.1566, -87.4483 )
-texture = ExtResource( 4 )
+position = Vector2( 428, 106.561 )
+texture = ExtResource( 8 )
 offset = Vector2( -1, -28 )
 
 [node name="cabeza" type="Sprite" parent="torso"]
 position = Vector2( 1.47934, -53.1111 )
-texture = ExtResource( 5 )
+z_index = 2
+texture = ExtResource( 6 )
 offset = Vector2( 5.52066, -76.8889 )
 __meta__ = {
 "_edit_bone_": true,
@@ -614,26 +623,26 @@ __meta__ = {
 [node name="oreja" type="Sprite" parent="torso/cabeza"]
 position = Vector2( -66.291, -34.4864 )
 z_index = -1
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 
 [node name="pelo" type="Sprite" parent="torso/cabeza"]
-position = Vector2( 6.00952, -102.637 )
-texture = ExtResource( 6 )
+position = Vector2( 6.50952, -102.637 )
+texture = ExtResource( 10 )
 
 [node name="ojo iz" type="Sprite" parent="torso/cabeza"]
 position = Vector2( -3.75842, -29.523 )
-texture = ExtResource( 2 )
+texture = ExtResource( 7 )
 
 [node name="ojo der" type="Sprite" parent="torso/cabeza"]
 position = Vector2( 55.7592, -27.4749 )
 scale = Vector2( 0.919824, 0.953231 )
-texture = ExtResource( 2 )
+texture = ExtResource( 7 )
 
 [node name="brazo der" type="Sprite" parent="torso"]
 position = Vector2( 13, -42 )
 rotation = -0.0625317
 z_index = -1
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 offset = Vector2( 20, 27 )
 __meta__ = {
 "_edit_bone_": true,
@@ -648,8 +657,7 @@ __meta__ = {
 
 [node name="brazo iz" type="Sprite" parent="torso"]
 position = Vector2( -22, -43 )
-rotation = -5.96046e-08
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 offset = Vector2( -21, 28 )
 flip_h = true
 __meta__ = {
@@ -659,7 +667,6 @@ __meta__ = {
 
 [node name="fin" type="Position2D" parent="torso/brazo iz"]
 position = Vector2( -39.8474, 58.9293 )
-rotation = -0.0039602
 __meta__ = {
 "_edit_bone_": true
 }
@@ -668,7 +675,7 @@ __meta__ = {
 position = Vector2( 12.1242, 4.24126 )
 rotation = 0.0615832
 z_index = -1
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 offset = Vector2( 1.93509, 10.5661 )
 __meta__ = {
 "_edit_bone_": true,
@@ -678,7 +685,7 @@ __meta__ = {
 [node name="pie der" type="Sprite" parent="torso/pierna der"]
 position = Vector2( 20.6362, 44.4472 )
 rotation = -0.0630998
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 offset = Vector2( 4.21722, 12.748 )
 flip_h = true
 __meta__ = {
@@ -695,7 +702,7 @@ __meta__ = {
 position = Vector2( -18.4974, 3.6107 )
 rotation = -0.00648255
 z_index = -1
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 offset = Vector2( -1.24088, 13.7349 )
 flip_h = true
 __meta__ = {
@@ -705,7 +712,7 @@ __meta__ = {
 
 [node name="pie iz" type="Sprite" parent="torso/pierna iz"]
 position = Vector2( -19.7149, 48.2607 )
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 offset = Vector2( -4.02325, 12.5135 )
 __meta__ = {
 "_edit_bone_": true

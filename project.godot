@@ -10,24 +10,48 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node2D",
+"class": "Casco",
+"language": "GDScript",
+"path": "res://escenas/equipo/Casco.gd"
+}, {
+"base": "Node2D",
+"class": "Escudo",
+"language": "GDScript",
+"path": "res://escenas/equipo/Escudo.gd"
+}, {
+"base": "Node2D",
 "class": "Espada",
 "language": "GDScript",
-"path": "res://Espada.gd"
+"path": "res://escenas/equipo/Espada.gd"
 }, {
 "base": "Node2D",
 "class": "Personaje",
 "language": "GDScript",
-"path": "res://personaje.gd"
+"path": "res://escenas/personaje/Personaje.gd"
+}, {
+"base": "Node2D",
+"class": "Peto",
+"language": "GDScript",
+"path": "res://escenas/equipo/Armadura.gd"
+}, {
+"base": "Node2D",
+"class": "Piernas",
+"language": "GDScript",
+"path": "res://escenas/equipo/Piernas.gd"
 } ]
 _global_script_class_icons={
-"Espada": "res://assets/iconos/espada.png",
-"Personaje": "res://assets/iconos/personaje.png"
+"Casco": "res://assets/iconos/casco.png",
+"Escudo": "res://assets/iconos/escudo.png",
+"Espada": "",
+"Personaje": "res://assets/iconos/personaje.png",
+"Peto": "res://assets/iconos/peto.png",
+"Piernas": "res://assets/iconos/piernas.png"
 }
 
 [application]
 
 config/name="GD project"
-run/main_scene="res://Escena.tscn"
+run/main_scene="res://escenas/pantallas/Escena.tscn"
 config/icon="res://assets/iconos/app.png"
 
 [physics]

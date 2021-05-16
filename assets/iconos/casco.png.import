@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pierna_iz.png-4501e681e38f4e7720c1f99386709008.stex"
+path="res://.import/casco.png-b7541b33039edb6195eceab8449aaa9e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/equipo/armaduras/armadura_de_cuero_lijera/pierna_iz.png"
-dest_files=[ "res://.import/pierna_iz.png-4501e681e38f4e7720c1f99386709008.stex" ]
+source_file="res://assets/iconos/casco.png"
+dest_files=[ "res://.import/casco.png-b7541b33039edb6195eceab8449aaa9e.stex" ]
 
 [params]
 

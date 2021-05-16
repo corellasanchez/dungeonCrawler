@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/e1b88978dab7693abbf14ab384ad2764.png-199a57b6841b66e498d6c21be42736b9.stex"
+path="res://.import/hombro.png-6d2b4747301b70b29595ec9f623934f3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/iconos/How to know the screen position of a node2D_ - Godot Engine - Q&A_files/e1b88978dab7693abbf14ab384ad2764.png"
-dest_files=[ "res://.import/e1b88978dab7693abbf14ab384ad2764.png-199a57b6841b66e498d6c21be42736b9.stex" ]
+source_file="res://assets/equipo/armaduras/armadura_de_cuero_lijera/hombro.png"
+dest_files=[ "res://.import/hombro.png-6d2b4747301b70b29595ec9f623934f3.stex" ]
 
 [params]
 

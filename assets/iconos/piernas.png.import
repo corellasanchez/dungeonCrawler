@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hombro_der.png-36a5e3163b9b8ede81d3ad793f355286.stex"
+path="res://.import/piernas.png-567274016667e6d9c2a6d76467d3c3f9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/equipo/armaduras/armadura_de_cuero_lijera/hombro_der.png"
-dest_files=[ "res://.import/hombro_der.png-36a5e3163b9b8ede81d3ad793f355286.stex" ]
+source_file="res://assets/iconos/piernas.png"
+dest_files=[ "res://.import/piernas.png-567274016667e6d9c2a6d76467d3c3f9.stex" ]
 
 [params]
 

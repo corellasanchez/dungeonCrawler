@@ -10,15 +10,12 @@ var ataque;
 # Texturas para espadas
 var txEspadaCorta = preload("res://assets/equipo/espadas/espada_corta.png")
 
-
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
 
 
-func escogerArma(nombre):
+func escogerTipo(nombre):
 	match nombre:
 		"espadaCorta":
 			ataque = 10;
