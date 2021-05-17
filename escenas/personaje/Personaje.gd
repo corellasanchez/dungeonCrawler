@@ -46,6 +46,8 @@ func _ready():
 	add_child(piernas)
 	piernas.escogerTipo('ArmaduraDeCueroTachonada')
 	
+	animation.play("Caminar")
+	
 func _process(delta):
 	posicionarEquipo()
 

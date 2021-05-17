@@ -42,7 +42,7 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "Casco": "res://assets/iconos/casco.png",
 "Escudo": "res://assets/iconos/escudo.png",
-"Espada": "",
+"Espada": "res://assets/iconos/espada.png",
 "Personaje": "res://assets/iconos/personaje.png",
 "Peto": "res://assets/iconos/peto.png",
 "Piernas": "res://assets/iconos/piernas.png"
