@@ -36,7 +36,8 @@ func _ready():
 	#escudo.escogerTipo('escudoDeMadera')
 	
 	add_child(casco)
-	casco.escogerTipo('cascoDeCuero')
+	#casco.escogerTipo('cascoDeCuero')
+	casco.escogerTipo('cascoDeCueroHierro')
 	
 	add_child(armadura)
 	#armadura.escogerTipo('ArmaduraDeCueroLijera')
