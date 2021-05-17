@@ -9,6 +9,7 @@ var defensa;
 
 # Texturas para los escudos
 var txEscudoDeMadera = preload("res://assets/equipo/escudos/escudo_de_madera.png")
+var txEscudoDeCoronas = preload("res://assets/equipo/escudos/escudo_de_coronas.png")
 
 
 # Called when the node enters the scene tree for the first time.
@@ -21,6 +22,9 @@ func escogerTipo(nombre):
 		"escudoDeMadera":
 			defensa = 10;
 			textura.texture = txEscudoDeMadera;
+		"escudoDeCoronas":
+			defensa = 15;
+			textura.texture = txEscudoDeCoronas;
 			
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -32,16 +32,18 @@ func _ready():
 	espada.escogerTipo('espadaCorta')
 	
 	add_child(escudo)
-	escudo.escogerTipo('escudoDeMadera')
+	escudo.escogerTipo('escudoDeCoronas')
+	#escudo.escogerTipo('escudoDeMadera')
 	
 	add_child(casco)
 	casco.escogerTipo('cascoDeCuero')
 	
 	add_child(armadura)
-	armadura.escogerTipo('ArmaduraDeCueroLijera')
+	#armadura.escogerTipo('ArmaduraDeCueroLijera')
+	armadura.escogerTipo('ArmaduraDeCueroTachonada')
 	
 	add_child(piernas)
-	piernas.escogerTipo('ArmaduraDeCueroLijera')
+	piernas.escogerTipo('ArmaduraDeCueroTachonada')
 	
 func _process(delta):
 	posicionarEquipo()
