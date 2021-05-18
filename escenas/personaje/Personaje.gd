@@ -2,66 +2,80 @@ extends Node2D
 
 class_name Personaje, "res://assets/iconos/personaje.png"
 
-export (PackedScene) var Espada
-export (PackedScene) var Escudo
-export (PackedScene) var Casco
-export (PackedScene) var Armadura
-export (PackedScene) var Piernas
-
 onready var animation = get_node("AnimationPlayer")
 onready var label = get_node("Label")
 
-onready var manoIzquierda = get_node("torso/brazo iz/fin")
-onready var manoDerecha = get_node("torso/brazo der/fin")
-onready var cabeza = get_node("torso/cabeza")
-onready var torso = get_node("torso")
+# Clase de la espada
+const Espada = preload("res://escenas/equipo/Espada.gd")
+# Sprite de la espada
+onready var nodoEspada = get_node("torso/brazo iz/fin/espada")
+# Instancia de la espada
+var espada
+
+# Clase del escudo
+const Escudo = preload("res://escenas/equipo/Escudo.gd")
+# Sprite del escudo
+onready var nodoEscudo = get_node("torso/brazo der/fin/escudo")
+# Instancia de la espada
+var escudo
+
+# Clase del casco
+const Casco = preload("res://escenas/equipo/Casco.gd")
+# Sprite del casco
+onready var nodoCasco = get_node("torso/cabeza/casco")
+# Instancia de la espada
+var casco
+
+# Clase de la armadura
+const Armadura = preload("res://escenas/equipo/Armadura.gd")
+# Sprite de la armadura
+onready var nodoArmadura = get_node("torso/armadura")
+onready var nodoHombroIz = get_node("torso/brazo iz/hombro iz")
+onready var nodoHombroDer = get_node("torso/brazo der/hombro der")
+# Instancia de la armadura
+var armadura
+
+# Clase de los pantalones
+const Pantalones = preload("res://escenas/equipo/Pantalones.gd")
+# sprites de las piernas
 onready var piernaIzquierda = get_node("torso/pierna iz")
 onready var piernaDerecha = get_node("torso/pierna der")
-
-onready var espada = Espada.instance()
-onready var escudo = Escudo.instance()
-onready var casco = Casco.instance()
-onready var armadura = Armadura.instance()
-onready var piernas = Piernas.instance()
-
+# Instancia de las piernas
+var pantalones
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	inicializarPartes()
+	probarEquipo()
+
+func inicializarPartes():
+	espada = Espada.new(nodoEspada)
+	escudo = Escudo.new(nodoEscudo)
+	casco = Casco.new(nodoCasco)
+	armadura = Armadura.new(nodoArmadura,nodoHombroIz,nodoHombroDer)
+	pantalones = Pantalones.new(piernaIzquierda,piernaDerecha)
+
+func probarEquipo():
 	
-	add_child(espada)
-	espada.escogerTipo('espadaCorta')
+	espada.equipar("espadaCorta")
 	
-	add_child(escudo)
-	escudo.escogerTipo('escudoDeCoronas')
-	#escudo.escogerTipo('escudoDeMadera')
+	# escudoDeCoronas escudoDeMadera
+	escudo.equipar('escudoDeMadera')
 	
-	add_child(casco)
-	#casco.escogerTipo('cascoDeCuero')
-	casco.escogerTipo('cascoDeCueroHierro')
+	# cascoDeCuero cascoDeHierro
+	casco.equipar("cascoDeHierro")
 	
-	add_child(armadura)
-	#armadura.escogerTipo('ArmaduraDeCueroLijera')
-	armadura.escogerTipo('ArmaduraDeCueroTachonada')
+	# armaduraDeCuero armaduraTachonada
+	armadura.equipar("armaduraDeCuero")
 	
-	add_child(piernas)
-	piernas.escogerTipo('ArmaduraDeCueroTachonada')
+	# pantalonesDeCuero
+	pantalones.equipar("pantalonesTachonados")
 	
-	animation.play("Caminar")
-	
+	#animation.play("Caminar")
+	animation.play("AtaqueEspadas")
+	#animation.play("Descanso")
+
 func _process(delta):
-	posicionarEquipo()
+	pass
 
-	#var State = "Descanso"
-	#print(animation.get_current_animation())	
-	#if animation.get_current_animation() == State:
-#		print("Hello")
-	#  animation.play(State) 
 
-func posicionarEquipo():
-	label.text = str(manoDerecha.get_global_position())
-	escudo.set_global_position(manoDerecha.get_global_position()) 
-	espada.set_global_position(manoIzquierda.get_global_position())
-	casco.set_global_position(cabeza.get_global_position())
-	armadura.set_global_position(torso.get_global_position())
-	piernaIzquierda.texture = piernas.textura
-	piernaDerecha.texture = piernas.textura

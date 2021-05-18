@@ -25,6 +25,11 @@ _global_script_classes=[ {
 "path": "res://escenas/equipo/Espada.gd"
 }, {
 "base": "Node2D",
+"class": "Pantalones",
+"language": "GDScript",
+"path": "res://escenas/equipo/Pantalones.gd"
+}, {
+"base": "Node2D",
 "class": "Personaje",
 "language": "GDScript",
 "path": "res://escenas/personaje/Personaje.gd"
@@ -33,19 +38,14 @@ _global_script_classes=[ {
 "class": "Peto",
 "language": "GDScript",
 "path": "res://escenas/equipo/Armadura.gd"
-}, {
-"base": "Node2D",
-"class": "Piernas",
-"language": "GDScript",
-"path": "res://escenas/equipo/Piernas.gd"
 } ]
 _global_script_class_icons={
 "Casco": "res://assets/iconos/casco.png",
 "Escudo": "res://assets/iconos/escudo.png",
 "Espada": "res://assets/iconos/espada.png",
+"Pantalones": "res://assets/iconos/piernas.png",
 "Personaje": "res://assets/iconos/personaje.png",
-"Peto": "res://assets/iconos/peto.png",
-"Piernas": "res://assets/iconos/piernas.png"
+"Peto": "res://assets/iconos/peto.png"
 }
 
 [application]

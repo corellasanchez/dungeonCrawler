@@ -2,26 +2,31 @@ extends Node2D
 
 class_name Espada, "res://assets/iconos/espada.png"
 
-onready var textura = get_node("textura")
+# Datos de la espada equipada
+var espadaEquipada
 
-# Dano provocado por la espada
-var ataque;
+# Sprite de la espada
+var texturaEspada
 
-# Texturas para espadas
-var txEspadaCorta = preload("res://assets/equipo/espadas/espada_corta.png")
+# Espadas disponibles
+var tiposDeEspada = [
+	{"nombre": "espadaCorta", "ataque": 10, "textura" : preload("res://assets/equipo/espadas/espada_corta.png")}
+	]
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
+# Constructor
+func _init(nodoEspada):
+	texturaEspada = nodoEspada
+	desequipar()
 
+# Desequipar la espada actual	
+func desequipar():
+	espadaEquipada = null
+	texturaEspada.visible = false
 
-func escogerTipo(nombre):
-	match nombre:
-		"espadaCorta":
-			ataque = 10;
-			textura.texture = txEspadaCorta;
-			
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+#Equipar una espada de la lista
+func equipar(nombre: String):
+	for i in range(0,tiposDeEspada.size()):
+		if(tiposDeEspada[i].nombre == nombre):
+			espadaEquipada = tiposDeEspada[i]
+			texturaEspada.texture = tiposDeEspada[i].textura
+			texturaEspada.visible = true

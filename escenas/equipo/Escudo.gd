@@ -2,31 +2,32 @@ extends Node2D
 
 class_name Escudo, "res://assets/iconos/escudo.png"
 
-onready var textura = get_node("textura")
+# Datos del Escudo equipado
+var escudoEquipado
 
-# Proteccion que provee el escudo
-var defensa;
+# Sprite del Escudo
+var texturaEscudo
 
-# Texturas para los escudos
-var txEscudoDeMadera = preload("res://assets/equipo/escudos/escudo_de_madera.png")
-var txEscudoDeCoronas = preload("res://assets/equipo/escudos/escudo_de_coronas.png")
+# Escudos disponibles
+var tiposDeEscudo = [
+	{"nombre": "escudoDeMadera", "defensa": 10, "textura" : preload("res://assets/equipo/escudos/escudo_de_madera.png")},
+	{"nombre": "escudoDeCoronas", "defensa": 15, "textura" : preload("res://assets/equipo/escudos/escudo_de_coronas.png")}
+	]
 
+# Constructor
+func _init(nodoEscudo):
+	texturaEscudo = nodoEscudo
+	desequipar()
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
+# Desequipar la Escudo actual	
+func desequipar():
+	escudoEquipado = null
+	texturaEscudo.visible = false
 
-
-func escogerTipo(nombre):
-	match nombre:
-		"escudoDeMadera":
-			defensa = 10;
-			textura.texture = txEscudoDeMadera;
-		"escudoDeCoronas":
-			defensa = 15;
-			textura.texture = txEscudoDeCoronas;
-			
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+#Equipar una escudo de la lista
+func equipar(nombre: String):
+	for i in range(0,tiposDeEscudo.size()):
+		if(tiposDeEscudo[i].nombre == nombre):
+			escudoEquipado = tiposDeEscudo[i]
+			texturaEscudo.texture = tiposDeEscudo[i].textura
+			texturaEscudo.visible = true
