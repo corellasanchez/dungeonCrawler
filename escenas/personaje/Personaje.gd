@@ -66,7 +66,7 @@ func probarEquipo():
 	casco.equipar("cascoDeHierro")
 	
 	# armaduraDeCuero armaduraTachonada
-	armadura.equipar("armaduraDeCuero")
+	armadura.equipar("armaduraTachonada")
 	
 	# pantalonesDeCuero
 	pantalones.equipar("pantalonesTachonados")
