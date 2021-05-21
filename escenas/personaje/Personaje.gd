@@ -72,7 +72,7 @@ func probarEquipo():
 	pantalones.equipar("pantalonesTachonados")
 	
 	#animation.play("Caminar")
-	animation.play("AtaqueEspadas")
+	animation.play("Ataque")
 	#animation.play("Descanso")
 
 func _process(delta):

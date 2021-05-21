@@ -547,6 +547,18 @@ tracks/43/keys = {
 "update": 0,
 "values": [ 0.0 ]
 }
+tracks/44/type = "value"
+tracks/44/path = NodePath("torso/brazo iz/fin/espada:z_index")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ -1 ]
+}
 
 [sub_resource type="Animation" id=2]
 loop = true
@@ -1675,7 +1687,7 @@ __meta__ = {
 }
 
 [node name="espada" type="Sprite" parent="torso/brazo iz/fin"]
-position = Vector2( 2.7923, -10.9526 )
+position = Vector2( 2.7923, -12.0751 )
 texture = ExtResource( 15 )
 offset = Vector2( -23.7705, -39.7835 )
 
