@@ -1687,7 +1687,8 @@ __meta__ = {
 }
 
 [node name="espada" type="Sprite" parent="torso/brazo iz/fin"]
-position = Vector2( 2.7923, -12.0751 )
+position = Vector2( 2.7923, -10.9526 )
+z_index = -1
 texture = ExtResource( 15 )
 offset = Vector2( -23.7705, -39.7835 )
 
